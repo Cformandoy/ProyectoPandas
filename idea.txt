@@ -1,0 +1,9 @@
+- Cambiar el nombre del doc descargado de xls a xlsx
+o
+
+-buscar como transformar de xls a xlsx
+
+o 
+-buscar como abrir un xls con pandas
+
+-crear interfaz con tkinter

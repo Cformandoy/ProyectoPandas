@@ -1,0 +1,3 @@
+from webScrap import *
+
+webScrap()
