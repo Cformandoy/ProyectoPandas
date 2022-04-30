@@ -3,6 +3,7 @@
 import os
 from shutil import rmtree
 import time
+from turtle import st
 
 #Selenium Imports - Realiza el trabajo principal de webScraping
 from selenium import webdriver
@@ -16,15 +17,19 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 #WEBSCRAP
-def webScrap():
+def webScrap(datoRut,datoClave,datoAge):
 
+
+    #------------------
     #Variables en Duro
     #Usuario Sii
-    usuario = "209182793"
-    clave   = "Cp209182793"
+    usuario = str(datoRut)
+    clave   = str(datoClave)
 
     #Fechas
-    age = "2021"
+    age = str(datoAge)
+
+    #------------------
 
     #Creacion de variable Temp
     Temp = (os.getcwd() + '/Temp')
@@ -35,7 +40,7 @@ def webScrap():
 
     options = webdriver.ChromeOptions()
 
-    options.add_argument('headless')
+    #options.add_argument('headless')
     
     options.add_argument("--windows-size=1920,1080")
     options.add_experimental_option("excludeSwitches",["enable-automation"])
