@@ -11,7 +11,7 @@ class   Tarea4:
     def __init__(self):
         # self.abrir()
         self.ventana1=tk.Tk()
-        self.ventana1.title("TAREA 3")
+        self.ventana1.title("TAREA 4")
         self.ventana1.resizable(False, False)
 
         self.cuaderno1 = ttk.Notebook(self.ventana1) 
@@ -39,7 +39,7 @@ class   Tarea4:
         self.label2.grid(column=0, row=1, padx=4, pady=4)
         self.clave=tk.StringVar()
         #dato entrada CLAVE
-        self.entryClave=ttk.Entry(self.labelframe2, textvariable=self.clave)
+        self.entryClave=ttk.Entry(self.labelframe2, textvariable=self.clave, show="*")
         self.entryClave.grid(column=1, row=1, padx=4, pady=4)
         #datos label3 AGE
         self.label3=ttk.Label(self.labelframe2, text="Año de Consulta:")
@@ -49,11 +49,16 @@ class   Tarea4:
         self.entryAge=ttk.Entry(self.labelframe2, textvariable=self.age)
         self.entryAge.grid(column=1, row=2, padx=4, pady=4)
         #Boton iniciar proceso
-        self.boton1=ttk.Button(self.labelframe2, text="Iniciar Proceso", command=self.iniciarProceso)
-        self.boton1.grid(column=0, row=3, padx=4, pady=4)
+        self.boton1=ttk.Button(self.labelframe2, text="Iniciar Proceso", command=self.iniciarProceso, width=30)
+        self.boton1.grid(columnspan=2, column=0, row=3, padx=4, pady=4)
         #Boton limpiar
-        self.boton2=ttk.Button(self.labelframe2, text="Limpiar Datos", command=self.limpiar)
-        self.boton2.grid(column=1, row=3, padx=4, pady=4)
+        self.boton2=ttk.Button(self.labelframe2, text="Limpiar Datos", command=self.limpiar, width=30)
+        self.boton2.grid(columnspan=2,column=0, row=4, padx=4, pady=4)
+        #Boton salir
+        self.boton3=ttk.Button(self.labelframe2, text="Salir", command=self.ventana1.destroy, width=30)
+        self.boton3.grid(columnspan=2,column=0, row=5, padx=4, pady=4)
+
+
 
 
     def iniciarProceso(self):

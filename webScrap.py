@@ -40,7 +40,7 @@ def webScrap(datoRut,datoClave,datoAge):
 
     options = webdriver.ChromeOptions()
 
-    #options.add_argument('headless')
+    options.add_argument('headless')
     
     options.add_argument("--windows-size=1920,1080")
     options.add_experimental_option("excludeSwitches",["enable-automation"])
